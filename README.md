@@ -2,13 +2,12 @@
 
 ## 项目布局
 ```
-├─input             存放生成的负载数据
+├─input             负载数据
 ├─out               
 │  └─artifacts
-│      └─DCS-1.0        
-├─scripts           负载数据生成和任务提交的脚本
-├─src
-└─target
+│      └─DCS-1.0    jar包  
+├─scripts           数据生成和任务提交的脚本
+└─src
 ```
 ## 环境配置
 hadoop版本: 2.10.1						
