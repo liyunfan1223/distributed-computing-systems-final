@@ -17,7 +17,7 @@ class WorkLoadGenerator():
             data_list.append((key, value))
         with open(filename, 'w', encoding='utf-8') as f:
             for data in data_list:
-                f.write('key' + str(data[0]) + '\t' + str(value) + '\n')
+                f.write('key' + str(data[0]) + '\t' + str(data[1]) + '\n')
             f.close()
             
         print(f'workload {filename} is generated.')

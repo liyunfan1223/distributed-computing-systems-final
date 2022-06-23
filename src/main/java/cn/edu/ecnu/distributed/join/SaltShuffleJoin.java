@@ -36,7 +36,7 @@ public class SaltShuffleJoin {
         });
 
         JavaRDD<String> table2 = jsc.textFile(args[1]);
-        // 对于高频率 扩张n倍 同时添加n种后缀
+        // 对于高频key 扩张n倍 同时添加n种后缀
         JavaRDD<Tuple2<String, Integer>> javaRDD2  = table2.flatMap(new FlatMapFunction<String, Tuple2<String, Integer>>() {
             @Override
             public Iterator<Tuple2<String, Integer>> call(String s) throws Exception {
@@ -70,7 +70,7 @@ public class SaltShuffleJoin {
 
         JavaPairRDD<String, Tuple2<Integer, Integer>> javaRDD6 = javaRDD31.join(javaRDD41);
 
-        // 消除可能存在的随即后缀
+        // 消除可能存在的随机后缀
         JavaPairRDD<String, Tuple2<Integer, Integer>> javaRDD7 = javaRDD6.mapToPair(new PairFunction<Tuple2<String, Tuple2<Integer, Integer>>, String, Tuple2<Integer, Integer>>() {
             @Override
             public Tuple2<String, Tuple2<Integer, Integer>> call(Tuple2<String, Tuple2<Integer, Integer>> t) throws Exception {
