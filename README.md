@@ -3,9 +3,7 @@
 ## 项目布局
 ```
 ├─input             负载数据
-├─out               
-│  └─artifacts
-│      └─DCS-1.0    jar包  
+├─out               jar包
 ├─scripts           数据生成和任务提交的脚本
 └─src
 ```
@@ -25,7 +23,7 @@ mv target/DCS-1.0.jar out/artifacts/DCS_1_0/DCS-1.0.jar
 ```
 
 ## 运行脚本
-使用脚本前需要启动HDFS和spark，配置hadoop和spark的环境变量，并将主节点设置为ecnu01
+使用脚本前需要启动HDFS和spark，配置hadoop和spark的环境变量，并将主节点设置为ecnu01（或根据环境修改脚本内容）
 
 ### 生成负载并上传至HDFS
 ```

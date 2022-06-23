@@ -19,10 +19,12 @@ class WorkLoadGenerator():
             for data in data_list:
                 f.write('key' + str(data[0]) + '\t' + str(value) + '\n')
             f.close()
+            
+        print(f'workload {filename} is generated.')
 
 if __name__ == '__main__':
     workLoadGenerator = WorkLoadGenerator()
-    
+
     workLoadGenerator.generate(skewed=-1, keys_num=int(10), scale = int(1e7), filename='input/data_lab1.txt')
     
     workLoadGenerator.generate(skewed=-1, keys_num=int(1e7), scale=int(1e7), filename='input/data_lab2.txt')
