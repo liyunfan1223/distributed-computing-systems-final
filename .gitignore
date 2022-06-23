@@ -1,0 +1,4 @@
+.idea/
+target/
+input/*
+scripts/gen_bar_plot.py
